@@ -12,7 +12,12 @@ function Repetir() {
 
 function Letras() {
     if (!Error(2)) {
-        document.getElementById("resultado").innerHTML = Mensaje("Papas en la Papa", "La papa tiene " + document.getElementById("num1").value.length +" raíces.","success", "fa-book");
+        if (parseInt(document.getElementById("num1").value.length) == 1) {
+            singular = " raíz.";
+        }else{
+            singular = " raíces."
+        }
+        document.getElementById("resultado").innerHTML = Mensaje("Papas en la Papa", "La papa tiene " + document.getElementById("num1").value.length + singular,"success", "fa-book");
     }else{
         MensajeError();
     }
