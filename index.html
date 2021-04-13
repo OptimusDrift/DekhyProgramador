@@ -18,6 +18,9 @@
       rel="stylesheet"
       type="text/css"
     />
+    <script src="js/mensaje.js"></script>
+    <script src="./js/maths.js"></script>
+    <script src="./js/texto.js"></script>
     <link href="./img/Icon.png" rel="icon" />
     <link
       href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -31,7 +34,7 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet" />
   </head>
 
-  <body id="page-top">
+  <body id="page-top" onload="Inicio()">
     <!-- Page Wrapper -->
     <div id="wrapper">
       <!-- Sidebar -->
@@ -88,13 +91,23 @@
           >
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Papa + Papa:</h6>
-              <a class="collapse-item" href="Sumar.html">Sumar Papas</a>
-              <a class="collapse-item" href="Calcular.html">Calcular Tamaño</a>
-              <a class="collapse-item" href="Temperatura.html">Temperatura</a>
-              <a class="collapse-item" href="Par.html">Par e Impar</a>
-              <a class="collapse-item" href="Papas.html">Papas en 3</a>
-              <a class="collapse-item" href="Primas.html">Primas</a>
-              <a class="collapse-item" href="Pure.html">Pure de Papas</a>
+              <a class="collapse-item" href="#" onclick="Sumar()"
+                >Sumar Papas</a
+              >
+              <a class="collapse-item" href="#" onclick="Calcular()"
+                >Calcular Tamaño</a
+              >
+              <a class="collapse-item" href="#" onclick="Temperatura()"
+                >Temperatura</a
+              >
+              <a class="collapse-item" href="#" onclick="Paridad()"
+                >Par e Impar</a
+              >
+              <a class="collapse-item" href="#" onclick="Tres()">Papas en 3</a>
+              <a class="collapse-item" href="#" onclick="Tios()">Primas</a>
+              <a class="collapse-item" href="#" onclick="Relleno()"
+                >Pure de Papas</a
+              >
             </div>
           </div>
         </li>
@@ -120,9 +133,13 @@
           >
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Custom Utilities:</h6>
-              <a class="collapse-item" href="Repetir.html">Repetir la Oración Papil</a>
-              <a class="collapse-item" href="Cantidad.html">Cantidad de Papas</a>
-              <a class="collapse-item" href="Jorge.html"
+              <a class="collapse-item" href="#" onclick="Papil()"
+                >Repetir la Oración Papil</a
+              >
+              <a class="collapse-item" href="#" onclick="Cantidades()"
+                >Cantidad de Papas</a
+              >
+              <a class="collapse-item" href="#" onclick="Oracion()"
                 >Jorge Contesta</a
               >
             </div>
@@ -194,179 +211,7 @@
           <!-- End of Topbar -->
 
           <!-- Begin Page Content -->
-          <div class="container-fluid">
-            <!-- Page Heading -->
-            <div
-              class="d-sm-flex align-items-center justify-content-between mb-4"
-            >
-              <h1 class="h3 mb-0 text-gray-800">¿Cómo Plantar PAPAS?</h1>
-            </div>
-
-            <!-- Content Row -->
-            <div class="row">
-              <div class="col-xl-3 col-md-6 mb-4">
-                <a href="https://twitter.com/OptimusDrift">
-                  <div class="card border-left-primary shadow h-100 py-2">
-                    <div class="card-body">
-                      <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                          <div
-                            class="text-xs font-weight-bold text-primary text-uppercase mb-1"
-                          >
-                            Twitter
-                          </div>
-                          <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            @OptimusDrift
-                          </div>
-                        </div>
-                        <div class="col-auto">
-                          <i class="fa fa-twitter fa-2x text-gray-300"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-xl-3 col-md-6 mb-4">
-                <a href="https://www.facebook.com/drift.king.142687/">
-                  <div class="card border-left-success shadow h-100 py-2">
-                    <div class="card-body">
-                      <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                          <div
-                            class="text-xs font-weight-bold text-success text-uppercase mb-1"
-                          >
-                            Facebook
-                          </div>
-                          <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            Drift King
-                          </div>
-                        </div>
-                        <div class="col-auto">
-                          <i class="fa fa-facebook fa-2x text-gray-300"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                  <a href="https://www.twitch.tv/optimusdrift">
-                <div class="card border-left-info shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-info text-uppercase mb-1"
-                        >
-                          Twitch
-                        </div>
-                        <div class="row no-gutters align-items-center">
-                          <div class="col-auto">
-                            <div
-                              class="h5 mb-0 mr-3 font-weight-bold text-gray-800"
-                            >
-                              OptimusDrift
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i
-                          class="fa fa-twitch fa-2x text-gray-300"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </a>
-              </div>
-
-              <div class="col-xl-3 col-md-6 mb-4">
-                  <a href="https://www.instagram.com/dark_drift/">
-                <div class="card border-left-warning shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-warning text-uppercase mb-1"
-                        >
-                        Instagram
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            dark_drift
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fa fa-instagram fa-2x text-gray-300"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            </div>
-
-            <!-- Content Row -->
-
-          
-
-            <!-- Content Row -->
-            <div class="">
-              <!-- Content Column -->
-             
-              <div class="mb-4">
-                <!-- Illustrations -->
-               
-                <!-- Approach -->
-                <div class="card shadow mb-4">
-                  <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">
-                      Explico como funcionan las papas
-                    </h6>
-                  </div>
-                  <div class="card-body">
-                    <p>
-                        Pueden calcular la cantidad de papas en el papametro de la izquierda, pero si quieren ver papas con letras pueden ir a el traductor de papas, acá un listado de objetivos papiles que se van a encontrar:
-                    </p>
-                    <ul>
-                        <li>
-                            Ingresar dos papas, sumarlas y mostrar el resultado en una tercera papa.
-                        </li>
-                        <li>
-                            Ingresar cuatro papas e indicar cual es la papa más grande y cual la mas pequeña.
-                        </li>
-                        <li>
-                            Ingresar una oración papil y una papa. Repetir la oración papil papas veces.
-                        </li>
-                        <li>
-                            Utilizar magia para crear un cambio de temperaturas en las papas, esas papas deben estar en papascentígrados a papascelsius y poder hacerlo al revez.
-                        </li>
-                        <li>
-                            Ingresar una oración papil y mostrar: «la oracion papil» tiene «n» papas.
-                        </li>
-                        <li>
-                            Ingresa papas y te dire si la cantidad es par.
-                        </li>
-                        <li>
-                            Mostrar las papas que se pueden cortar en 3, si tenes 20 papas cuántas papas se pueden papiar en papas divididas en papas.
-                        </li>
-                        <li>
-                            Mostrar las papas que son primas, hasta que se dejen de meter papas, ¿Esa es una papa sobrina?
-                        </li>
-                        <li>
-                            Preguntarle a Jorge el nombre de la papa, su apellido, cuántos días estuvo bajo tierra y en qué granja estuvo, el te contestara :D.
-                        </li>
-                        <li>
-                            Ingresa dos papas enteras (no las cortes), les agregare pure de papa.
-                        </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div id="contenido"></div>
           <!-- /.container-fluid -->
         </div>
         <!-- End of Main Content -->
@@ -398,9 +243,7 @@
       role="dialog"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
-    >
-     
-    </div>
+    ></div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -411,7 +254,5 @@
 
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <script src="js/maths.js"></script>
   </body>
 </html>
